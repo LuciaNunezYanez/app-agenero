@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/fondoGris"
+    android:orientation="vertical"
+    tools:context=".ConfiguracionActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorRosaClaro"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <!--<ImageView
+            android:id="@+id/imgSenal"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1"
+            android:layout_gravity="end"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="90dp" />-->
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginRight="15dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="CONFIGURACIÓN Y PERMISOS"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_configuration_buble" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#EEC5C5C5"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/fondoGris">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/fondoGris"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Alerta al presionar el botón de encendido"
+                android:textColor="@color/colorAzulFuerte"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10sp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Cuando se genere la alerta se enviaran fotografías de la camára frontal y camára trasera, se grabará audio y se tomarán las coordenadas de la ubicación actual. "
+                android:textAlignment="textStart"
+                android:textColor="#404141"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10sp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Presione la tecla de encendido rápidamente 3 veces para alertar a las autoridades cuando necesite ayuda urgente."
+                android:textAlignment="textStart"
+                android:textColor="#404141"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/switchServicioActivo"
+                style="@style/SwitchCompatStyle"
+                android:layout_width="124dp"
+                android:layout_height="20dip"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:maxHeight="10dp"
+                android:minWidth="100dp"
+                android:shadowColor="@color/colorVerde"
+                android:switchMinWidth="56dp"
+                android:text=" Estatus:"
+                android:textColor="#404141"
+                android:textSize="16sp"
+                android:thumbTextPadding="25dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Configure el número de veces que se desean tomar las fotografías (Máximo 3 ciclos)."
+                android:textColor="#404141"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center|center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/txtNoCiclo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#9EDDE0E0"
+                    android:inputType="number"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/iBtnGuardarCiclo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:backgroundTint="@color/colorRosaGuinda"
+                    app:srcCompat="@drawable/ic_save" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#5B585858" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="15dp"
+                    android:text="Permisos solicitados"
+                    android:textColor="@color/colorAzulFuerte"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:paddingLeft="20dp"
+                        android:text="Permiso de almacenamiento"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-condensed-light"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:text="Es necesario para guardar en modo local los audios grabados por la aplicación. "
+                            android:textColor="#404141"
+                            android:textSize="16sp" />
+
+                        <ImageButton
+                            android:id="@+id/btnAlmacenamientoWrite"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="end"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@color/colorVerdeGob"
+                            android:onClick="activarPermisoAlmacWrite"
+                            app:srcCompat="@drawable/ic_save" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:paddingLeft="20dp"
+                        android:text="Permiso de cámara"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-condensed-light"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:text="Se solicita para tomar fotografías cuando el botón de pánico es activado. "
+                            android:textColor="#404141"
+                            android:textSize="16sp" />
+
+                        <ImageButton
+                            android:id="@+id/btnCamara"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="end"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@color/colorVerdeGob"
+                            android:onClick="activarPermisoCam"
+                            app:srcCompat="@drawable/ic_camara" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:paddingLeft="20dp"
+                        android:text="Permiso para grabar audio"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-condensed-light"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:text="Necesario para acceder al micrófono del dispositivo y grabar audio. "
+                            android:textColor="#404141"
+                            android:textSize="16sp" />
+
+                        <ImageButton
+                            android:id="@+id/btnMicrofono"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="end"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@color/colorVerdeGob"
+                            android:onClick="activarPermisoMicrof"
+                            app:srcCompat="@drawable/ic_microfono" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:paddingLeft="20dp"
+                        android:text="Permiso de ubicación"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-condensed-light"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:text="Se utiliza para obtener la geo referencia del dispositivo móvil. "
+                            android:textColor="#404141"
+                            android:textSize="16sp" />
+
+                        <ImageButton
+                            android:id="@+id/btnUbicacion"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="end"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@color/colorVerdeGob"
+                            android:onClick="activarPermisoUbic"
+                            app:srcCompat="@drawable/ic_ubicacion" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:paddingLeft="20dp"
+                        android:text="Permiso para aparecer encima"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="25dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textVie"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-condensed-light"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:text="En caso de permitir el acceso a la cámara es necesario este permiso para tomar las fotografías en segundo plano. "
+                            android:textColor="#404141"
+                            android:textSize="16sp" />
+
+                        <ImageButton
+                            android:id="@+id/btnAparecerEncima"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="end"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@color/colorVerdeGob"
+                            android:onClick="aparecerEncima"
+                            app:srcCompat="@drawable/ic_encima" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

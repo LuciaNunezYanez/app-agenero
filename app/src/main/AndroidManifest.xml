@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.c5durango.alertagenero">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_alerta_g"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/ic_alerta_g"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <receiver
+            android:name=".Broadcast.EncendidoBroadcast"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="android.intent.action.QUICKBOOT_POWEROFF" />
+                <!-- For HTC devices -->
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".NuevaContrasenaActivity"
+            android:label="@string/title_activity_nueva_contrasena"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".RecuperacionActivity"
+            android:label="@string/title_activity_recuperacion"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar"></activity>
+        <activity
+            android:name=".ViolentometroActivity"
+            android:label="@string/title_activity_violentometro"
+            android:theme="@style/AppTheme" />
+
+        <receiver
+            android:name=".Broadcast.BotonazoReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".Servicios.ServicioWidget"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name=".PanicoWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/panico_widget_info" />
+        </receiver>
+
+        <service
+            android:name=".Servicios.GenerarAlertaService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Servicios.GPSService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Servicios.ServicioNotificacion"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".ConfiguracionActivity"
+            android:label="@string/title_activity_configuracion"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DirectorioActivity"
+            android:label="@string/title_activity_directorio"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".RegistroActivity"
+            android:label="@string/title_activity_registro"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".PerfilActivity"
+            android:label="@string/title_activity_perfil"
+            android:theme="@style/AppTheme" />
+
+        <service
+            android:name=".Servicios.FotografiaService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Servicios.AudioService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

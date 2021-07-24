@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorRojoFuerte">#DB2828</color>
+    <color name="colorRojoClaro">#E14747</color>
+    <color name="colorAzulFuerte">#A6005C83</color>
+    <color name="colorAzulIntermedio">#58B2D7</color>
+    <color name="colorAzulClaro">#7FBDD7</color>
+    <color name="typing">#FF36C44B</color>
+    <color name="colorVerde">#177723</color>
+    <color name="colorNaranja">#FF3D00</color>
+    <color name="colorNaranjaFuerte">#D15027</color>
+    <color name="colorNaranjaPastel">#FF9999</color>
+    <color name="colorMoradoFuerte">#7E2697</color>
+    <color name="colorMoradoClaro">#E290F3</color>
+
+    <!--COLORES DEL GOBIERNO DE DURANGO-->
+    <color name="colorRojoGob">#A71C37</color>
+    <color name="colorNarGob">#F7751E</color>
+    <color name="colorVerdeGob">#41AE47</color>
+    <color name="colorAmarGob">#F6D406</color>
+    <color name="colorAzulCGob">#088DBE</color>
+    <color name="colorAzulFGob">#3061AC</color>
+
+    <color name="colorRojoWidget">#E14F60</color>
+
+    <color name="colorRosaClaro">#F76BB7</color>
+    <color name="colorRosaFuerte">#E75277</color>
+    <color name="colorRosaGuinda">#D81A60</color>
+    <color name="fondoGris">#808080</color>
+    <color name="colorGrisOscuro">#585858</color>
+    <color name="colorGrisClaro">#B8B5AE </color>
+</resources>

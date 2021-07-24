@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    android:clipToPadding="false"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:background="@color/colorRosaClaro"
+        android:foregroundGravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:srcCompat="@drawable/escudo_ssp_durango" />
+
+        <!--<ImageView
+            android:id="@+id/imgSenal"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1"
+            android:layout_gravity="end"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="90dp" />-->
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="ALERTA\nDE GÉNERO"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/logo_cc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="93dp"
+        android:background="#EEC5C5C5"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50sp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/imgResultado"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:visibility="visible"
+                tools:srcCompat="@drawable/ic_color_info" />
+
+            <TextView
+                android:id="@+id/txtResultado"
+                android:layout_width="286dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="Presiona el botón para solicitar ayuda."
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/btn_red"
+            android:onClick="activarBoton"
+            android:scaleType="fitCenter"
+            android:textAlignment="center" />
+
+
+
+        <!--<Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:thumb="@drawable/thumb_selector"
+            android:track="@drawable/track_selector" />-->
+
+
+        <Button
+            android:id="@+id/btnCancelarAlerta"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/colorGrisClaro"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="center"
+            android:onClick="cancelarAlerta"
+            android:text="Cancelar alerta"
+            android:textColor="#FFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtApunta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/grupofab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:fab_addButtonColorNormal="@color/colorRosaGuinda"
+        app:fab_addButtonColorPressed="@color/colorAzulFuerte"
+        app:fab_labelStyle="@style/etiqueta">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorRosaFuerte"
+            app:fab_colorPressed="@color/colorRosaClaro"
+            app:fab_icon="@drawable/ic_user_white"
+            app:fab_size="normal"
+            app:fab_title="Mi información" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabConfig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorAzulCGob"
+            app:fab_colorPressed="@color/colorAzulIntermedio"
+            app:fab_icon="@drawable/ic_config"
+            app:fab_size="mini"
+            app:fab_title="Configuración" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorNaranjaPastel"
+            app:fab_colorPressed="@color/colorRosaFuerte"
+            app:fab_icon="@drawable/ic_direct"
+            app:fab_size="mini"
+            app:fab_title="Directorio" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabViolentometro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorRosaClaro"
+            app:fab_colorPressed="@color/colorNaranjaPastel"
+            app:fab_icon="@drawable/ic_rule"
+            app:fab_size="mini"
+            app:fab_title="Violentómetro" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

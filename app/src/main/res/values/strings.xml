@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Alerta de género</string>
+    <!-- Escritura de imagen fallida. Compruebe si ha otorgado el permiso WRITE_EXTERNAL_STORAGE-->
+    <string name="error_cannot_write">No se puede escribir la imagen capturada por la cámara.</string>
+    <!--cámara abierta fallida. Probablemente porque otra aplicación está usando la cámara -->
+    <string name="error_cannot_open">No se puede abrir la cámara.</string>
+    <!-- el permiso de la cámara no está disponible Solicite el permiso de la cámara antes de inicializarla.-->
+    <string name="error_cannot_get_permission">Permiso de cámara no disponible.</string>
+    <string name="error_not_having_camera">Su dispositivo no tiene cámara frontal.</string>
+    <string name="error_camera_permission_denied">Permiso de cámara denegado.</string>
+    <string name="btn_tittle_capture_image">Capturar imagen,</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="title_activity_configuracion">Configuración y permisos</string>
+    <string name="title_activity_permisos">permisos</string>
+
+    <string name="error_tiempo_agotado">Tiempo agotado</string>
+    <string name="error_sin_conexion">Sin conexión</string>
+    <string name="error_fallo_autenticar">Falló al autenticar</string>
+    <string name="error_servidor">Servidor</string>
+    <string name="error_red">Red</string>
+    <string name="error_parseo">Parseo</string>
+    <string name="error_desconocido">Desconocido</string>
+    <string name="title_activity_registro">Ingresa tus datos</string>
+    <string name="title_activity_directorio">Directorio de centros de atención</string>
+    <string name="title_activity_violentometro">Violentómetro</string>
+    <string name="title_activity_main2">Main Activity</string>
+    <string name="title_activity_perfil">Mi información</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <string name="action_settings">Configuración</string>
+    <string name="title_activity_recuperacion">Recuperar cuenta</string>
+    <string name="title_activity_nueva_contrasena">Cambiar contraseña</string>
+</resources>

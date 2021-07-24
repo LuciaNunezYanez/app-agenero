@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    android:orientation="vertical"
+    tools:context=".DirectorioActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorRosaClaro"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="239dp"
+            android:layout_height="70dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="DIRECTORIO DE CENTROS DE ATENCIÓN"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_location_2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#EEC5C5C5"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/listDirectorio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--<ScrollView
+        android:id="@+id/scrollPersonales"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#7C7C7C">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>-->
+</LinearLayout>

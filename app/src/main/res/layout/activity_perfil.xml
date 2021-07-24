@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".PerfilActivity">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/ic_profile_yellow" />
+
+    <TextView
+        android:id="@+id/txtCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center_horizontal"
+        android:text="@string/app_name"
+        android:textColor="@color/colorAzulCGob"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#80F76BB7"
+        android:orientation="vertical"></LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#9CF7F7F7"
+                android:orientation="horizontal"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <!--<LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35sp"
+                android:layout_height="35sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                app:srcCompat="@drawable/ic_rosa_user" />
+
+
+        </LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center_horizontal"
+                        android:text="Mi nombre:"
+                        android:textColor="@color/colorRosaGuinda"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteX="4dp" />
+
+                    <TextView
+                        android:id="@+id/txtNombreUsuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:gravity="center_horizontal"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteX="4dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center_horizontal"
+                        android:text="Género:"
+                        android:textColor="@color/colorRosaGuinda"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteX="4dp" />
+
+                    <TextView
+                        android:id="@+id/txtSexoUsuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:gravity="center_horizontal"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteX="4dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center_horizontal"
+                        android:text="Teléfono móvil:"
+                        android:textColor="@color/colorRosaGuinda"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteX="4dp" />
+
+                    <TextView
+                        android:id="@+id/txtTelMovil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:gravity="center_horizontal"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteX="4dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center_horizontal"
+                        android:text="Fecha de nacimiento:"
+                        android:textColor="@color/colorRosaGuinda"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteX="4dp" />
+
+                    <TextView
+                        android:id="@+id/txtFechaNacimiento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:gravity="center_horizontal"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteX="4dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center_horizontal"
+                        android:text="Padecimientos:"
+                        android:textColor="@color/colorRosaGuinda"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteX="4dp" />
+
+                    <TextView
+                        android:id="@+id/txtPadecimientos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:gravity="center_horizontal"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteX="4dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center_horizontal"
+                        android:text="Tipo de sangre:"
+                        android:textColor="@color/colorRosaGuinda"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteX="4dp" />
+
+                    <TextView
+                        android:id="@+id/txtTipoSangre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:gravity="center_horizontal"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteX="4dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center_horizontal"
+                        android:text="Alergias:"
+                        android:textColor="@color/colorRosaGuinda"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteX="4dp" />
+
+                    <TextView
+                        android:id="@+id/txtAlergias"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:gravity="center_horizontal"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteX="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/colorRosaClaro"
+                android:orientation="vertical"></LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="#9CF7F7F7"
+                android:orientation="horizontal"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center_horizontal"
+                        android:text="Mi dirección:"
+                        android:textColor="@color/colorRosaGuinda"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteX="4dp" />
+
+                    <TextView
+                        android:id="@+id/txtCalleNumero"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:gravity="center_horizontal"
+                        android:text="Calle y numero "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtColonia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:gravity="center_horizontal"
+                        android:textSize="18sp"
+                        tools:text="Colonia / Fraccionamiento" />
+
+                    <TextView
+                        android:id="@+id/txtCPLocalidadMunicipio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:gravity="center_horizontal"
+                        android:text="CP Localidad Municipio"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtCalle1y2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:gravity="center_horizontal"
+                        android:text="Entre calles"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtFachada"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:gravity="center_horizontal"
+                        android:text="Fachada"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSalir"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/colorRojoGob"
+                android:fontFamily="sans-serif-condensed-light"
+                android:onClick="cerrarSesion"
+                android:text="Cerrar sesión"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

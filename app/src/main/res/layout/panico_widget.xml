@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#23F1F1F1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/widget_margin">
+
+        <Button
+            android:id="@+id/btnAlertarWidget"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/colorRosaGuinda"
+            android:drawableLeft="@drawable/ic_alarma"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:paddingLeft="20dp"
+            android:text="Activar"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+</RelativeLayout>

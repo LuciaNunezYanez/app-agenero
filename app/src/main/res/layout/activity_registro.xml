@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="right"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".RegistroActivity">
+    <!--<android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>-->
+
+
+    <LinearLayout
+        android:id="@+id/linearPersonales"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="#F8F8F8"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorRosaClaro"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/lblPersonales"
+                android:layout_width="239dp"
+                android:layout_height="70dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="INGRESA TUS DATOS PERSONALES"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_profile" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollPersonales"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Correo electrónico: *"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#8F8888"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="100"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/lblNuevaContrasena"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Nueva contraseña: *"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtContrasenaReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#8F8888"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Nombre (s): *"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtNombres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#8F8888"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLength="50"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Apellido paterno: *"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtPaterno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#8F8888"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLength="40"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Apellido materno:"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtMaterno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#8F8888"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLength="40"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Fecha de nacimiento:"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/dateNacimiento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:editable="false"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:hint="DD/MM/AAAA"
+                        android:textColor="#000000"
+                        android:textColorHint="#918686"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btnFechaNac"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:backgroundTint="@color/colorRosaGuinda"
+                        android:text="SELECCIONAR"
+                        android:textColor="#FFFFFF"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textVifew3"
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:layout_weight="2"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center_vertical"
+                        android:text="Sexo: *"
+                        android:textColor="@color/colorRosaClaro"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerSexo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="#8F8888"
+                        android:spinnerMode="dropdown" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Padecimientos:"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/areaPadecimientos"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#E6E6E6"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:isScrollContainer="true"
+                    android:maxLength="500"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:scrollbars="vertical"
+                    android:textColor="@android:color/black"
+                    android:verticalScrollbarPosition="defaultPosition" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Teléfono móvil de este dispositivo: *"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#8F8888"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Alergias:"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/areaAlergias"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#E6E6E6"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:maxLength="200"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Tipo de sangre:"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerTipoSangre"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#8F8888"
+                    android:spinnerMode="dropdown" />
+
+                <Button
+                    android:id="@+id/btnSiguiente"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="@color/colorVerdeGob"
+                    android:text="Siguiente"
+                    android:textColor="#FFFF"
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Parte II - Registro de datos del domicilio -->
+    <LinearLayout
+        android:id="@+id/linearDomiclio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="#F8F8F8"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorRosaClaro"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="239dp"
+                android:layout_height="70dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="INGRESA LOS DATOS DE TU DOMICILIO"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_house_color" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Calle: *"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtCalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#8F8888"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLength="100"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Número exterior: *"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtNumeroExt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#8F8888"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLength="10"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Colonia/fraccionamiento: *"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtColonia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#8F8888"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLength="100"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Código postal:"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtCodigoP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#8F8888"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Estado: *"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerEstado"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#8F8888"
+                    android:spinnerMode="dropdown" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Municipio: *"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerMunicipio"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#8F8888"
+                    android:spinnerMode="dropdown" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Localidad: *"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerLocalidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#8F8888"
+                    android:spinnerMode="dropdown" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="¿Entre qué calles está? (opcional)"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Calle 1:"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtCalle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#8F8888"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Calle 2:"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtCalle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#8F8888"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:textColor="@android:color/black" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom"
+                    android:text="Referencia del domicilio: *"
+                    android:textColor="@color/colorRosaClaro"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/areaReferencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#F1F1F1"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:isScrollContainer="true"
+                    android:maxLength="200"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:scrollbars="vertical"
+                    android:textColor="@android:color/black"
+                    android:verticalScrollbarPosition="defaultPosition" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnRegresar"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:backgroundTint="@color/colorRojoWidget"
+                        android:text="Regresar"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12dp" />
+
+                    <Button
+                        android:id="@+id/btnFinalizar"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:backgroundTint="@color/colorVerdeGob"
+                        android:text="Finalizar "
+                        android:textColor="#FFFFFF"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

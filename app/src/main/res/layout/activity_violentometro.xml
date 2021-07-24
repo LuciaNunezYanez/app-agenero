@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ViolentometroActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorRosaClaro"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="201dp"
+            android:layout_height="70dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="VIOLENTÓMETRO"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_rule_red" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#EEC5C5C5"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="bottom|center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="NO IMPORTA EN QUÉ NIVEL TE IDENTIFIQUES, LA VIOLENCIA NO ES NORMAL, DETÉNLA"
+                android:textColor="@color/colorAzulFuerte"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="¡INFÓRMATE!"
+                android:textColor="@color/colorAzulFuerte"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="870dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/violentometrorecortt" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="230dp"
+                android:background="@drawable/fondo_morado_rosa"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="Si te sientes en peligro"
+                    android:textColor="@color/colorRosaGuinda"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="ACTIVA EL BOTÓN DE PÁNICO"
+                    android:textColor="#FFFF"
+                    android:textSize="37sp" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="o llama al 911"
+                    android:textColor="#F2F2F2"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

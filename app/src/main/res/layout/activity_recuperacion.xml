@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RecuperacionActivity">
+
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="Recuperación de cuenta"
+        android:textColor="@color/colorRosaGuinda"
+        android:textSize="30dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Ingrese el correo electrónico para recuperar su cuenta y cambiar la contraseña."
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/txtCorreoRecuperacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/colorRosaGuinda"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnGenerarCodigo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/colorAzulCGob"
+        android:drawableRight="@drawable/ic_email"
+        android:text="Generar código de recuperación"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Verifique su bandeja de entrada e ingrese el código de recuperación recibido. "
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/txtCodigoRecuperacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Código de recuperación"
+        android:inputType="text"
+        android:maxLength="8"
+        android:textColor="@color/colorRosaGuinda"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnRecuperar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/colorVerdeGob"
+        android:text="COMPROBAR CÓDIGO"
+        android:drawableRight="@drawable/ic_login"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
