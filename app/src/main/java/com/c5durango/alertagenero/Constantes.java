@@ -36,6 +36,6 @@ public class Constantes {
 
 
     // public static String URL = "http://10.11.127.70:8888"; // LOCAL
-    public static String URL = "http://189.254.158.196:8888";    // IP PUBLICA
-    // public static String URL = "http://10.11.118.91:8888";    // IP PRIVADA
+    // public static String URL = "http://189.254.158.196:8888";    // IP PUBLICA
+    public static String URL = "http://10.11.118.91:8888";    // IP PRIVADA
 }
